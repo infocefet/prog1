@@ -1,0 +1,54 @@
+Trabalho Final de Programação 1
+
+O trabalho consiste em gerar rotas para um frota de 25 ônibus de 
+transporte escolar para transportarem estudantes localizados em 
+difentes localizações para o CEFET. Considere que o ponto de partida
+e o ponto de chegada final dos ônibus é o ponto 0 (CEFET).
+Cada ônibus pode transportar no máximo 200 pessoas por vez, 
+conforme o arquivo de dados.
+
+Há 100 pontos de ônibus. Para cada ponto de ônibus, temos uma coordenada
+x e uma coordenada y da sua localização. Temos também a coluna DEMAND que indica 
+quantos estudantes estão esperando o ônibus naquela parada. 
+O intervalo de tempo entre READY TIME e DUE DATE indica a janela de tempo 
+em que os estudantes precisam ser buscados pelo ônibus.
+Ignore as colunas SERVICE e TIME.
+
+Os instantes de tempo estão como números inteiros para facilitar. Ou seja,
+912, por exemplo, pode ser interpretado como o minuto 912 do dia.
+
+Para facilitar, considere que o ônibus gasta x unidades de tempo para 
+percorrer x unidades de distância. Ou seja, se a distância entre dois pontos
+for de 50 Km, o ônibus levará 50 min para fazer o trajeto.
+
+a) Leia os dados do arquivo
+
+b) Monte um matriz de distâncias 100 x 100 e armazene em cada posição
+ a distância entre os pontos i e j. Use a fórmula da distância euclidiana
+ entre dois pontos. 
+
+c) Implemente um algortimo para gerar uma solução inicial para o problema:
+Cada rota vai ter uma sequencia de pontos a serem visitados e todas
+elas começam e terminam no ponto 0.
+
+Exemplo de rota pra 1 veículo
+Rota 0:  0 - 7 - 9 - 22 - 5 - 35 - 89- 67 - 0
+Para montar uma rota, comece do ponto 0. Do 0, vá para o ponto 
+cuja janela de tempo esteja mais perto de expirar (dentre os pontos
+ainda não foi visitados).E assim por diante. A cada ponto visitado,
+atualize a quantidade de passageiros somando o valor DEMAND.
+Quando não puder mais adicionar ninguém sem ultrapassar o limite de 
+passageiros retorne ao CEFET.
+
+Repita o processo para cada ônibus.
+No final, você terá uma solução inicial viável para o problema.
+
+d) Implemente o Algoritmo Iterated Local Search - ILS
+
+
+
+ 
+
+
+
+
